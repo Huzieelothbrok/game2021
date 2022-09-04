@@ -6,11 +6,11 @@ public class movement : MonoBehaviour
 {
     public Rigidbody rb;
     private int count=0;
-    private float speed = 0.05f;
+    public float speed = 0.05f;
     public float x, y;
     private Touch touch;
+    public GameObject obj;
     SwipeManager sm;
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,8 @@ public class movement : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3(0, 0, 9f * Time.deltaTime));
-        // rb.AddForce(0, 0, 100 * Time.deltaTime);
+        
+                // rb.AddForce(0, 0, 100 * Time.deltaTime);
         // float verticalMovement = Input.GetAxis("Vertical") * Time.deltaTime;
         //float horizontalMovement = Input.GetAxis("Horizontal") * Time.deltaTime;
         //x = Input.GetAxis("Horizontal");
